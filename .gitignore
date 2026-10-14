@@ -1,0 +1,14 @@
+.env
+*.log
+
+# Go
+bin/
+dist/
+*.exe
+*.out
+*.test
+
+# IDE
+.idea/
+.vscode/
+
