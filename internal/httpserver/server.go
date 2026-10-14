@@ -26,19 +26,16 @@ func New(cfg config.Config, db *gorm.DB) *Server {
 	r.Use(gin.Logger(), gin.Recovery())
 
 	userRepo := repository.NewUserRepository(db)
-	todoRepo := repository.NewTodoRepository(db)
 
 	tokens := security.NewTokenManager(cfg.JWT.Secret, time.Duration(cfg.JWT.ExpiresMinutes)*time.Minute)
 
 	authSvc := service.NewAuthService(userRepo, tokens)
 	userSvc := service.NewUserService(userRepo)
-	todoSvc := service.NewTodoService(todoRepo)
 
 	authController := controller.NewAuthController(authSvc)
 	userController := controller.NewUserController(userSvc)
-	todoController := controller.NewTodoController(todoSvc)
 
-	registerRoutes(r, tokens, authController, userController, todoController)
+	registerRoutes(r, tokens, authController, userController)
 
 	return &Server{Router: r}
 }

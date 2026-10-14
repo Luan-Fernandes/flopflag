@@ -17,7 +17,6 @@ func registerRoutes(
 	tokens *security.TokenManager,
 	auth *controller.AuthController,
 	users *controller.UserController,
-	todos *controller.TodoController,
 ) {
 	r.GET("/health", func(c *gin.Context) {
 		httpx.OK200(c, "ok", gin.H{"status": "ok"})
@@ -33,15 +32,6 @@ func registerRoutes(
 	protected.Use(middleware.AuthRequired(tokens))
 	{
 		protected.GET("/me", users.Me)
-
-		todoGroup := protected.Group("/todos")
-		{
-			todoGroup.GET("", todos.List)
-			todoGroup.POST("", todos.Create)
-			todoGroup.GET("/:id", todos.Get)
-			todoGroup.PATCH("/:id", todos.Update)
-			todoGroup.DELETE("/:id", todos.Delete)
-		}
 
 		admin := protected.Group("/admin")
 		admin.Use(middleware.RequireRoles(domain.RoleAdmin))

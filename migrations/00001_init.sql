@@ -35,37 +35,7 @@ FOR EACH ROW
 EXECUTE PROCEDURE trigger_set_timestamp();
 -- +goose StatementEnd
 
--- +goose StatementBegin
-CREATE TABLE IF NOT EXISTS todos (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  title TEXT NOT NULL,
-  done BOOLEAN NOT NULL DEFAULT FALSE,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
--- +goose StatementEnd
-
--- +goose StatementBegin
-DROP TRIGGER IF EXISTS set_timestamp_todos ON todos;
--- +goose StatementEnd
-
--- +goose StatementBegin
-CREATE TRIGGER set_timestamp_todos
-BEFORE UPDATE ON todos
-FOR EACH ROW
-EXECUTE PROCEDURE trigger_set_timestamp();
--- +goose StatementEnd
-
--- +goose StatementBegin
-CREATE INDEX IF NOT EXISTS idx_todos_user_id ON todos(user_id);
--- +goose StatementEnd
-
 -- +goose Down
--- +goose StatementBegin
-DROP TABLE IF EXISTS todos;
--- +goose StatementEnd
-
 -- +goose StatementBegin
 DROP TABLE IF EXISTS users;
 -- +goose StatementEnd
