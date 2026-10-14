@@ -22,7 +22,7 @@ WORKDIR /app
 COPY --from=build /out/api /app/api
 COPY --from=build /out/migrate /app/migrate
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD ["/app/api"]
 
