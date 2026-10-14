@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"boliplate-go/internal/domain"
-	"boliplate-go/internal/httpx"
-	"boliplate-go/internal/repository"
-	"boliplate-go/internal/security"
+	"github.com/Luan-Fernandes/flopflag/internal/domain"
+	"github.com/Luan-Fernandes/flopflag/internal/httpx"
+	"github.com/Luan-Fernandes/flopflag/internal/repository"
+	"github.com/Luan-Fernandes/flopflag/internal/security"
 
 	"github.com/jackc/pgx/v5/pgconn"
 	"gorm.io/gorm"

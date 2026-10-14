@@ -3,8 +3,8 @@ package middleware
 import (
 	"strings"
 
-	"boliplate-go/internal/httpx"
-	"boliplate-go/internal/security"
+	"github.com/Luan-Fernandes/flopflag/internal/httpx"
+	"github.com/Luan-Fernandes/flopflag/internal/security"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

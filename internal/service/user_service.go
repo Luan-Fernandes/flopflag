@@ -5,9 +5,9 @@ import (
 	"errors"
 	"net/http"
 
-	"boliplate-go/internal/domain"
-	"boliplate-go/internal/httpx"
-	"boliplate-go/internal/repository"
+	"github.com/Luan-Fernandes/flopflag/internal/domain"
+	"github.com/Luan-Fernandes/flopflag/internal/httpx"
+	"github.com/Luan-Fernandes/flopflag/internal/repository"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"

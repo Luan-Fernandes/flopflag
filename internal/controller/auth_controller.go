@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"boliplate-go/internal/httpx"
-	"boliplate-go/internal/service"
+	"github.com/Luan-Fernandes/flopflag/internal/httpx"
+	"github.com/Luan-Fernandes/flopflag/internal/service"
 
 	"github.com/gin-gonic/gin"
 )

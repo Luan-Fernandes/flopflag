@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"boliplate-go/internal/config"
+	"github.com/Luan-Fernandes/flopflag/internal/config"
 )
 
 func PostgresURL(cfg config.DBConfig) string {

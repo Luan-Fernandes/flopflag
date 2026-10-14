@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"boliplate-go/internal/config"
-	"boliplate-go/internal/db"
-	"boliplate-go/migrations"
+	"github.com/Luan-Fernandes/flopflag/internal/config"
+	"github.com/Luan-Fernandes/flopflag/internal/db"
+	"github.com/Luan-Fernandes/flopflag/migrations"
 
 	_ "github.com/jackc/pgx/v5/stdlib"
 	"github.com/pressly/goose/v3"

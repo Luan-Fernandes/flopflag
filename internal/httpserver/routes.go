@@ -3,11 +3,11 @@ package httpserver
 import (
 	"net/http"
 
-	"boliplate-go/internal/controller"
-	"boliplate-go/internal/domain"
-	"boliplate-go/internal/httpserver/middleware"
-	"boliplate-go/internal/httpx"
-	"boliplate-go/internal/security"
+	"github.com/Luan-Fernandes/flopflag/internal/controller"
+	"github.com/Luan-Fernandes/flopflag/internal/domain"
+	"github.com/Luan-Fernandes/flopflag/internal/httpserver/middleware"
+	"github.com/Luan-Fernandes/flopflag/internal/httpx"
+	"github.com/Luan-Fernandes/flopflag/internal/security"
 
 	"github.com/gin-gonic/gin"
 )

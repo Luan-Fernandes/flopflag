@@ -3,9 +3,9 @@ package controller
 import (
 	"strconv"
 
-	"boliplate-go/internal/httpserver/middleware"
-	"boliplate-go/internal/httpx"
-	"boliplate-go/internal/service"
+	"github.com/Luan-Fernandes/flopflag/internal/httpserver/middleware"
+	"github.com/Luan-Fernandes/flopflag/internal/httpx"
+	"github.com/Luan-Fernandes/flopflag/internal/service"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

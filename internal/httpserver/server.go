@@ -3,11 +3,11 @@ package httpserver
 import (
 	"time"
 
-	"boliplate-go/internal/config"
-	"boliplate-go/internal/controller"
-	"boliplate-go/internal/repository"
-	"boliplate-go/internal/security"
-	"boliplate-go/internal/service"
+	"github.com/Luan-Fernandes/flopflag/internal/config"
+	"github.com/Luan-Fernandes/flopflag/internal/controller"
+	"github.com/Luan-Fernandes/flopflag/internal/repository"
+	"github.com/Luan-Fernandes/flopflag/internal/security"
+	"github.com/Luan-Fernandes/flopflag/internal/service"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

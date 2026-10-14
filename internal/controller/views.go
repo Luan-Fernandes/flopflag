@@ -3,7 +3,7 @@ package controller
 import (
 	"time"
 
-	"boliplate-go/internal/domain"
+	"github.com/Luan-Fernandes/flopflag/internal/domain"
 
 	"github.com/google/uuid"
 )

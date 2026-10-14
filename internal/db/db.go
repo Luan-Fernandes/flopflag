@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"boliplate-go/internal/config"
+	"github.com/Luan-Fernandes/flopflag/internal/config"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

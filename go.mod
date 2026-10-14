@@ -1,4 +1,4 @@
-module boliplate-go
+module github.com/Luan-Fernandes/flopflag
 
 go 1.25.7
 

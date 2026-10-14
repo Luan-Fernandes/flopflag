@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	"boliplate-go/internal/config"
-	"boliplate-go/internal/db"
-	"boliplate-go/internal/httpserver"
+	"github.com/Luan-Fernandes/flopflag/internal/config"
+	"github.com/Luan-Fernandes/flopflag/internal/db"
+	"github.com/Luan-Fernandes/flopflag/internal/httpserver"
 )
 
 func main() {
